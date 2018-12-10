@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextInput from './Chatbox/TextInput';
 import Header from './Header/Header';
-import BubbleChat from './Components/BubbleChat'
+import Messages from './BubbleChat/Messages'
 import logo from './logo.svg';
 import './App.css';
 
@@ -30,7 +30,7 @@ class App2 extends Component {
       <div>
         <Header screenName={this.state.screenName} />
         <TextInput />
-        <BubbleChat />
+        <Messages text1="Hey your a big willy"text2="No u"/>
       </div>
     )
 
