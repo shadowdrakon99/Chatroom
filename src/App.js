@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import UserIcon from './Components/userIcon'
+import TextInput from './Chatbox/TextInput';
+import Header from './Header/Header';
+import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -12,4 +14,27 @@ class App extends Component {
   }
 }
 
-export default App;
+class App2 extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      screenName: "Bob" || ""
+    }
+
+  }
+
+  render() {
+
+    return(
+      <div>
+        <Header screenName={this.state.screenName} />
+        <TextInput />
+      </div>
+    )
+
+  }
+}
+
+export default App2;
