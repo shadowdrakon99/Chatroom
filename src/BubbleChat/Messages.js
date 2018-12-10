@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-import BubbleChatThem from './BubbleChatThem'
-import BubbleChatMe from './BubbleChatMe'
+import BubbleChat from './BubbleChatMe'
+import fillerMessages from './fillerMessages';
 
+const messagesStyles = {
+  width:"100vw",
+  flex:1,
+  display:"flex",
+  flexDirection:"column",
+  overflow:"scroll",
+  marginLeft:"10px"
+}
 
 class Messages extends Component {
   render(){
@@ -9,10 +17,8 @@ class Messages extends Component {
     const message1 = this.props.text1
     const message2 = this.props.text2
   return(
-    <div>
-      <BubbleChatMe text={message1}/>
-
-      <BubbleChatThem text1={message2}/>
+    <div style={messagesStyles}>
+      { fillerMessages.map( v => <BubbleChat message={v.message} me={v.me} />)}
     </div>
   )
 

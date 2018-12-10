@@ -27,10 +27,10 @@ class App2 extends Component {
   render() {
 
     return(
-      <div>
+      <div className="App">
         <Header screenName={this.state.screenName} />
+        <Messages/>
         <TextInput />
-        <Messages text1="Hey your a big willy"text2="No u"/>
       </div>
     )
 
