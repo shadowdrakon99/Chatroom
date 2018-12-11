@@ -33,7 +33,7 @@ class App2 extends Component {
     super(props);
 
     this.state = {
-      screenName: "Bob" || ""
+      screenName: {this.props.textInput} || ""
     }
 
   }
@@ -44,6 +44,7 @@ class App2 extends Component {
       <div>
         <Header screenName={this.state.screenName} />
         <TextInput />
+
       </div>
     )
 
