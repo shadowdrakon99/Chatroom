@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextInput from './Chatbox/TextInput';
 import Header from './Header/Header';
 import Messages from './BubbleChat/Messages'
+import ModalText from './Modal/ModalText';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,18 +20,24 @@ class App2 extends Component {
     super(props);
 
     this.state = {
-      screenName: {this.props.textInput} || ""
+     screenName: ""
     }
 
+  }
+
+  setScreenName(screenName){
+    this.setState({ screenName });
   }
 
   render() {
 
     return(
       <div className="App">
+        <ModalText onSetScreenName = {this.setScreenName.bind(this)} />
         <Header screenName={this.state.screenName} />
-        <Messages/>
+        <Messages />
         <TextInput />
+
 
       </div>
     )

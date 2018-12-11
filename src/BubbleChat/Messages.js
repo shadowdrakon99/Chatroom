@@ -7,13 +7,12 @@ const messagesStyles = {
   flex:1,
   display:"flex",
   flexDirection:"column",
-  overflow:"scroll",
+  overflow:"auto",
   marginLeft:"10px"
 }
 
 class Messages extends Component {
   render(){
-
     const message1 = this.props.text1
     const message2 = this.props.text2
   return(

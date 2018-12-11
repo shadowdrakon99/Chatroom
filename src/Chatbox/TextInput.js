@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./index.css"
-import Modal from "./Chatbox/Modal/Modal";
+
 
 class TextInput extends Component {
 
